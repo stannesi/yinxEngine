@@ -45,7 +45,7 @@ class SceneManager {
   }
 
   create(name, first = false) {
-    const sceneName = name || 'scene-' + length + 1;
+    const sceneName = name || 'scene-' + this.scenes.length + 1;
     const newScene = new Scene(sceneName, this);
     this.add(newScene, first);
     return newScene;
@@ -101,9 +101,12 @@ class SceneManager {
   nextScene(remove = false) {
     const index = this.scenes.indexOf(this.activeScene);
     const nextIndex = index + 1;
-    
+    let newScene;
+
     if (nextIndex !== this.scenes.length) {
-      const newScene = this.load(nextIndex);
+      
+      newScene = this.load(nextIndex);
+
       if (remove) {
         this.removeAt(index);
       }
@@ -115,9 +118,12 @@ class SceneManager {
   prevScene(remove = false) {
     const index = this.scenes.indexOf(this.activeScene);
     const prevIndex = index - 1;
- 
+    let newScene;
+
     if (prevIndex !== -1  ) {
-      const newScene = this.load(prevIndex);
+      
+      newScene = this.load(prevIndex);
+      
       if (remove) {
         this.removeAt(index);
       }
