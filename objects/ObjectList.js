@@ -6,7 +6,8 @@
 */
 
 class ObjectList extends Array {
-  constructor(...items) {
+  // constructor(...items) {
+  constructor() {
     // super(...items);
     this._type = "type.list.object";
     this.lenght = 0;
