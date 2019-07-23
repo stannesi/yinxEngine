@@ -217,6 +217,7 @@ class Ticker extends EventObject {
       this.deltaTime = this.elapsedMS = 0;
     }
 
+
     document.getElementById('times').innerHTML = `lastime: ${this.deltaTime} <br> current time: ${parseInt(this.elapsedMS)} <br> FPS :: ${parseInt(this.FPS)} `;
   
     this.lastTime = currentTime;
