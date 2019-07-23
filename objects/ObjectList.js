@@ -10,7 +10,7 @@ class ObjectList extends Array {
   constructor() {
     // super(...items);
     this._type = "type.list.object";
-    this.lenght = 0;
+    this.length = 0;
   }
 
   // add object
